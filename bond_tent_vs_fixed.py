@@ -43,7 +43,7 @@ TOTAL_BOND_MARKET = [
 
 YEARS_OF_MARKET_RETURNS = len(TOTAL_STOCK_MARKET)
 
-LENGTH = 30
+LENGTH = 20
 INITIAL_PORTFOLIO = 1_000_000
 WITHDRAWL_RATE = 0.04
 EXPENSES = [INITIAL_PORTFOLIO * WITHDRAWL_RATE] * LENGTH
@@ -201,8 +201,12 @@ def plot(min_year, max_year, num_xticks, fname):
     plt.show()
 
 
-plot(1955, 1974, 8, f"stagflation_{LENGTH}.png")
-plot(1925, 1945, 6, f"great_depression_{LENGTH}.png")
-plot(1900, 1918, 6, f"panic_of_1907_{LENGTH}.png")
+def imgfname(prefix):
+    return f"{prefix}_{FIXED_AA_STOCKS}_{BOND_TENT_START_STOCKS}_{BOND_TENT_END_STOCKS}_{BOND_TENT_YEARS}_{LENGTH}.png"
+
+
+plot(1955, 1974, 8, imgfname("stagflation"))
+plot(1925, 1945, 6, imgfname("great_depression"))
+plot(1900, 1918, 6, imgfname("panic_of_1907"))
 if LENGTH <= 20:
-    plot(1990, 2020, 3, f"dot_com_crash_{LENGTH}.png")
+    plot(1990, 2020, 3, imgfname("dot_com_crash"))

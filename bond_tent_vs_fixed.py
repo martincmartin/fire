@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
 FIRST_YEAR_OF_MARKET_RETURNS = 1871
 
@@ -43,14 +42,14 @@ TOTAL_BOND_MARKET = [
 
 YEARS_OF_MARKET_RETURNS = len(TOTAL_STOCK_MARKET)
 
-LENGTH = 20
+LENGTH = 30
 INITIAL_PORTFOLIO = 1_000_000
 WITHDRAWL_RATE = 0.04
 EXPENSES = [INITIAL_PORTFOLIO * WITHDRAWL_RATE] * LENGTH
 
 # 20 years: 60% works best.
 # 30 years: 68% works best.
-FIXED_AA_STOCKS = 0.60
+FIXED_AA_STOCKS = 0.70
 # 20 years: 63% to 97% over 14 years works best.
 # 30 years: 47% to 100% over 14 years works best.
 #

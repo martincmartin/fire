@@ -12,6 +12,12 @@ FIRST_YEAR_OF_MARKET_RETURNS = 1871
 # 2021: https://www.bogleheads.org/forum/viewtopic.php?p=5815123#p5815123
 # 2021: https://bit.ly/2NvyAEQ   Tab "Data_Series"
 
+# Notes on cFIREsim's data:
+#
+# The annual data is in js/marketData.js.  It is *not* inflation adjusted.
+#
+# https://github.com/boknows/cFIREsim-open/blob/master/js/marketData.js
+
 # Inflation-adjusted Real Returns, 1871 - 2020
 # fmt: off
 TOTAL_STOCK_MARKET = [
